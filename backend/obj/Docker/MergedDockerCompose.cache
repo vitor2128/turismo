@@ -1,0 +1,16 @@
+services:
+  backend:
+    build:
+      context: C:\Users\vh-v\Downloads\Projetos\C#\backendNewcon\backend
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: backend
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\vh-v\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\vh-v\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'
